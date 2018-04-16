@@ -15,9 +15,7 @@ EnRoute-Application: 	de.fraunhofer.abm
 JPM-Command:			abm
 
 -includeresource: \
-	{readme.md}, \
-	{static=static},\
-	{web=web}
+	{readme.md}
 
 -buildpath: \
 	osgi.enroute.base.api,\

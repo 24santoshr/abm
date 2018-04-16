@@ -1,6 +1,6 @@
 package de.fraunhofer.abm.app;
 
-import static de.fraunhofer.abm.util.AbmApplicationConstants.*;
+import static de.fraunhofer.abm.util.AbmApplicationConstants.googleClientId;
 
 import java.io.IOException;
 import java.util.List;
@@ -22,14 +22,8 @@ import de.fraunhofer.abm.app.auth.SecurityContext;
 import de.fraunhofer.abm.crawler.api.Crawler;
 import de.fraunhofer.abm.domain.RepositoryDTO;
 import de.fraunhofer.abm.http.client.HttpUtils;
-import osgi.enroute.configurer.api.RequireConfigurerExtender;
-import osgi.enroute.google.angular.capabilities.RequireAngularWebResource;
 import osgi.enroute.rest.api.REST;
 import osgi.enroute.rest.api.RESTRequest;
-import osgi.enroute.webserver.capabilities.RequireWebServerExtender;
-@RequireAngularWebResource(resource={"angular.js","angular-resource.js", "angular-route.js", "angular-cookies.js"}, priority=1000)
-@RequireWebServerExtender
-@RequireConfigurerExtender
 @Component(name="de.fraunhofer.abm.rest")
 public class AbmApplication implements REST {
 
